@@ -1,0 +1,10 @@
+.jumbotron{
+    background-color: grey;
+    font-family: 'Abril Fatface', cursive;
+}
+.card-header{
+    font-weight: 700;
+}
+#train-table{
+    font-weight: 600;
+}

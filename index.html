@@ -5,20 +5,86 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Train Scheduler</title>
+
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
 </head>
 
 <body>
-  <div class="jumbotron">
-    <div class="container">
+  <div class="container text-center">
+    <div class="jumbotron">
       <h1 class="display-3">Train Station</h1>
       <p class="lead">Train schedule</p>
     </div>
   </div>
 
+  <div class="container">
+    <div class="card">
+      <div class="card-header">Current Train Schedule</div>
+      <div class="card-body">
+        <table class="table">
+          <thead id="train-table">
+            <tr>
+              <th>Train Name</th>
+              <th>Destination</th>
+              <th>Frequency (min)</th>
+              <th>Next Arrival</th>
+              <th>Minutes Away</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <td>FudgeFace</td>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-header">Add Train</div>
+      <div class="card-body">
+
+
+        <form>
+
+          <div class="form-group">
+            <label for="train-name">Train Name</label>
+            <input type="text" class="form-control" id="train-name">
+          </div>
+          <div class="form-group">
+            <label for="train-destination">Destination</label>
+            <input type="text" class="form-control" id="train-group">
+          </div>
+          <div class="form-group">
+            <label for="train-time">First Train Time (HH:mm -Military Time)</label>
+            <input type="text" class="form-control" id="train-time">
+          </div>
+          <div class="form-group">
+            <label for="train-frequency">Frequency (min)</label>
+            <input type="text" class="form-control" id="train-frequency">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <br>        <br>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
   <script src="assets/javascript/app.js"></script>
