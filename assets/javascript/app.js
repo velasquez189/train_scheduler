@@ -24,9 +24,10 @@ $(".btn").on("click", function (event) {
     trainDestination = $("#train-destination").val().trim();
     trainTime = $("#train-time").val().trim();
     trainFrequency = $("#train-frequency").val().trim();
-    
+
     console.log("oh Raj");
 
+    // var trainTime= moment(trainTime).format("HH:mm");
     database.ref().push({
         trainName: trainName,
         trainDestination: trainDestination,
@@ -34,5 +35,18 @@ $(".btn").on("click", function (event) {
         trainFrequency: trainFrequency
     })
 })
+
+database.ref().on("child_added", function(childSnapshot, prevChildKey){
+    $("#trainTable").append(
+        "<tr><td id='train-name'>" + childSnapshot.val().trainName  +
+        "</td><td id='train-destination'>" + childSnapshot.val().trainDestination +
+        "</td><td id='train-frequency'>" + childSnapshot.val().trainFrequency +
+        "</td><td id='train-time'>" + childSnapshot.val().trainTime + "</td></tr>"
+    )
+    console.log(childSnapshot.val());
+})
+
+
+
 
 
